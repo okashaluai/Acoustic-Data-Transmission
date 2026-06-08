@@ -10,15 +10,15 @@
 ## Setup
 First of all we need to solder the pins on the `esp8266` microcontroller:
 
-![microcontrollerandpins.png](../_resources/microcontrollerandpins.png)
-<div style="page-break-after: always;"></div>
+![microcontrollerandpins.png](components_pictures/microcontrollerandpins.png)
 
 After soldering the pins:
-![photo_5841502251434839951_y.jpg](../_resources/photo_5841502251434839951_y.jpg)
+
+![photo_5841502251434839951_y.jpg](components_pictures/photo_5841502251434839951_y.jpg)
 
 Now, after we soldered the pins on the microcontroller, we need to connect the analog microphone module via the jumper wires:
-![photo_5841502251434839959_y.jpg](../_resources/photo_5841502251434839959_y.jpg)
-<div style="page-break-after: always;"></div>
+
+![photo_5841502251434839959_y.jpg](components_pictures/photo_5841502251434839959_y.jpg)
 
 **We connect them as follows:**
 
@@ -27,12 +27,11 @@ Microphone:G -> Microcontroller:G
 Microphone:+ -> Microcontroller:3V3
 Microphone:D0 -> digital output leave it disconnected.
 
-
-![photo_5841502251434839956_y.jpg](../_resources/photo_5841502251434839956_y.jpg)
+![photo_5841502251434839956_y.jpg](components_pictures/photo_5841502251434839956_y.jpg)
 
 Connect it to the compute and configure the arduino IDE, choose the respective board (in our case Generic ESP8266 Module) and the port.
 
-<div style="page-break-after: always;"></div>
+***
 
 ## Python Script (Software-Defined Transmitter)
 **The Algorithm: On-Off Keying (OOK)**
@@ -168,11 +167,3 @@ if (silence_counter > 50) {
 ```
 
 If the room goes quiet, the `silence_counter` ticks up and the receiver resets itself and busy waits for the next data transmission. Because each loop is 20ms, waiting for 50 silent chunks means waiting for exactly 1 full second of silence ($50 \cdot 20ms = 1000ms$).
-
-<div style="page-break-after: always;"></div>
-
-## Attachments
-
-1. `transmitter.py`
-2. `receiver.ino`
-3. `demo.mp4`

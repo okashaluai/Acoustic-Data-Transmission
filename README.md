@@ -1,5 +1,9 @@
 # Acoustic Data Exfiltration
 
+
+## Example Experiment
+See the `demo.mp4` video. 
+
 ## Used Hardware:
 1. `esp8266` microcontroller
 2. `LM393` Analog microphone module
